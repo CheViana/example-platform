@@ -13,13 +13,13 @@ roleRef:
   apiGroup: rbac.authorization.k8s.io
 
 apiVersion: rbac.authorization.k8s.io/v1
-kind: ClusterRole
+kind: Role
 metadata:
   namespace: zoneprinter
   name: admin-networking
 rules:
 - apiGroups: ["networking.gke.io"]
-  resources: ["*"]
+  resources: ["multiclusteringresses"]
   verbs: ["*"]
 
 kind: RoleBinding
@@ -32,6 +32,6 @@ subjects:
   name: ns-reconciler-zoneprinter
   namespace: config-management-system
 roleRef:
-  kind: ClusterRole
+  kind: Role
   name: admin-networking
   apiGroup: rbac.authorization.k8s.io
