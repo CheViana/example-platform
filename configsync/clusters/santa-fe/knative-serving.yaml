@@ -11,7 +11,7 @@ metadata:
 spec:
   config:
     istio:
-      local-gateway.knative-serving.knative-local-gateway: "knative-local-gateway.default.svc.cluster.local"
+      local-gateway.knative-serving.knative-local-gateway: "knative-local-gateway.knative-serving.svc.cluster.local"
 ---
 apiVersion: batch/v1
 kind: Job
