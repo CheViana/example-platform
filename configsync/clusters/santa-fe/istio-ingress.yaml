@@ -1,0 +1,7 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  labels:
+    cluster: santa-fe
+    istio-injection: enabled
+  name: istio-system
